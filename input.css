@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.taskInterface{
+    @apply flex flex-col w-full m-auto bg-gray-200 transition-all p-2 rounded-md h-screen
+}
+.addTask{
+    @apply flex flex-col w-full p-2 bg-white rounded-md
+}
+h3{
+    @apply text-center
+}
+#name{
+    @apply rounded-sm h-0 focus-within:h-8 ease-out transition-all 
+}
+#name:focus-within ~ .lname{
+    @apply collapse transition-all ease-out
+}
+#description{
+    @apply h-0 focus-within:h-16 transition-all ease-out max-h-12 focus-within:min-h-16 resize-none
+}
+
+#description:focus-within ~ .ldescription{
+    @apply collapse
+}
+input, select, textarea{
+    @apply mb-2
+}
+label{
+    @apply mt-1
+}
+#addButton{
+    @apply bg-black text-white w-fit p-1 pl-5 pr-5 rounded-md m-auto transition-all collapse
+}
+
+.taskList{
+    @apply flex flex-col mt-5
+}
+.taskDivHead{
+    @apply mb-1 grid grid-cols-6 p-1 rounded-md gap-1
+}
+.taskDivHead span{
+    @apply text-center block w-full bg-gray-200 rounded-md
+}
+.taskDivHead, #taskDiv {
+    @apply rounded-md bg-white transition-all ease-in-out delay-200
+}
+.mipotra{
+    @apply grid grid-cols-6 p-1 rounded-md gap-1
+}
+.mipotra span{
+    @apply text-center flex flex-row items-center w-full bg-slate-200 rounded-md justify-around p-1
+}
+.ChangeButton{
+    @apply bg-red-400 rounded-md m-1 w-fit p-1 pl-2 pr-2
+}
+.delButton {
+    @apply bg-green-400 rounded-md m-1 w-fit p-1 pl-2 pr-2
+}
+.invisible{
+    @apply hidden
+}
+.clr{
+    @apply bg-black w-fit m-auto text-white p-1 pl-2 pr-2 rounded-md mb-3 hover:text-red-400 transition-all
+
+}
+*{
+    @apply transition-all delay-100
+}

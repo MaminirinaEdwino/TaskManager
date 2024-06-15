@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <title>TaskManager</title>
+</head>
+
+<body>
+    <div class="taskInterface">
+        <h3>Add task</h3>
+        <div class="addTask">
+            
+            <input type="text" id="name" placeholder="task name" required oninput="testeButton()" value=""> 
+            <label for="name" class="lname">Task name</label>
+            <label for="level" >Priority</label>
+            <select name="priority" id="level">
+                <option value="Low">Low</option>
+                <option value="Mid">Mid</option>
+                <option value="High">High</option>
+            </select>
+
+            
+            <textarea name="description" placeholder="Description" id="description" required oninput="testeButton()" value="">
+            </textarea >
+            <label for="description" class="ldescription">Description</label>
+            <button onclick="add()" id="addButton">Add</button>
+        </div>
+        <div class="taskList">
+            <h3>Task list</h3>
+            <button onclick="delall()" class="clr">Clear</button>
+            <div class="taskDivHead">
+                <span id="taskId">Id</span>
+                <span id="taskName">Task name</span>
+                <span id="taskPriority">Priority</span>
+                <span id="taskState">State</span>
+                <span id="taskDescription">Description</span>
+                <span id="taskAction">Action</span>
+            </div>
+            <div id="taskDiv">
+               
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
